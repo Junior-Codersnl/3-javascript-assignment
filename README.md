@@ -21,7 +21,5 @@ https://github.com/HackYourFuture/JavaScript1/blob/master/Week1/MAKEME.md (2.Jav
 
 https://github.com/HackYourFuture/JavaScript1/blob/master/Week2/MAKEME.md (2.JavaScript exercises-Question 4 and 5)
 
-https://github.com/HackYourFuture/JavaScript1/blob/master/Week3/MAKEME.md (2.JavaScript exercises)
+https://github.com/HackYourFuture/JavaScript1/blob/master/Week3/MAKEME.md (2.JavaScript exercises-Question 3, 4 and 5)
 
-Hangi sorular?
-Cozumlerin linki?
