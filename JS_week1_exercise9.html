@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+	<!-- After we define the variables and give the initial values, we assign another value to each variable based on
+	the second equality. So, the value of each variable changes according to the second line of code. The equality calculates
+	the remainder of each variable with the % symbol and the result for each is equal to 1 as shown in the HTML file.-->  
+
+	<p>The value of x:</p>
+	<p id="demo1"></p>
+	<hr/>
+
+	<p>The value of y:</p>
+	<p id="demo2"></p>
+	<hr/>
+
+	<p>The value of z:</p>
+	<p id="demo3"></p>
+
+    <script type="text/javascript">
+
+		var x = 7;
+		x = x % 3;
+		document.getElementById("demo1").innerHTML = x;
+		
+
+		var y = 21;
+		y = y % 4;
+		document.getElementById("demo2").innerHTML = y;
+		
+		var z = 13;
+		z = z % 2;
+		document.getElementById("demo3").innerHTML = z;		
+
+	</script>
+
+
+
+
+</body>
+</html>

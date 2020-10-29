@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+
+		function book (title, author, alreadyRead)
+		{
+			this.title = title;
+			this.author = author;
+			this.alreadyRead = alreadyRead
+		}
+
+		var book1 = new book("War & Peace", "Leo Tolstoy", true);
+		var book2 = new book("Leo Africanus", "Amin Maalouf", false);
+		var book3 = new book("Angels and Demons", "Dan Brown", false);
+
+		var books = [book1, book2, book3];
+
+		var text = "";
+
+		for (var i=0; i<books.length; i++)
+			{
+				text += books[i].title+" by "+books[i].author+"<br>";
+				if (books[i].alreadyRead==true)
+					{
+						text += "You already read "+books[i].title+"<hr>";
+					}
+				else
+					{
+						text += "You still need to read "+books[i].title+"<hr>";
+					}
+			}
+		document.getElementById("demo").innerHTML = text;
+
+	</script>
+
+
+
+
+</body>
+</html>

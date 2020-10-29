@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+
+	const numChildren = [1, 2, 3, 4, 5];
+	const partnerNames = ["Adam", "Joe", "Barry", "Jack", "Phil"];
+	const locations = ["Netherlands", "USA", "Germany", "UK", "Canada"];
+	const jobs = ["teacher", "professor", "data scientist", "manager", "sales representative"];
+	var text = "";
+
+	function tellFortune (children, partner, location, job)
+	{
+		document.getElementById("demo").innerHTML = text+"You will be a "+job[Math.floor(Math.random() * 5)]+" in "+location[Math.floor(Math.random() * 5)]+ ", married to "+partner[Math.floor(Math.random() * 5)]+" with "+children[Math.floor(Math.random() * 5)]+" kid(s).";
+	}
+
+	tellFortune(numChildren, partnerNames, locations, jobs);
+
+	</script>
+
+
+
+
+</body>
+</html>
