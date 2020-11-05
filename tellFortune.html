@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="myBtn">Try it</button>
+<h1 id="demo"></h1>
+
+<script>
+	const numChildren = [0,1,2] ; 
+	const partnerNames = ["Nick","Peter","Frank","Anne"] ; 
+	const locations = ["France","England","Germany","Seweden"];
+	const jobs = ["Teacher","Datascientist","Engnery","Freelancer"];
+
+	function tellFortune() {
+		var rand = Math.floor(Math.random() * partnerNames.length);
+		var print ='You are married with ' + partnerNames[rand];
+		rand = Math.floor(Math.random() * numChildren.length);
+		if (rand == 0) {
+		 	print += " and you don't have childeren. ";  
+		} else if (rand == 1) {
+		  	print += " and you have " + numChildren[rand] + " child.";
+		} else {
+			print += " and you have " + numChildren[rand] + " children.";
+		}
+		rand = Math.floor(Math.random() * locations.length);
+		print += " You live in " + locations[rand];
+		rand = Math.floor(Math.random() * jobs.length);
+		print += " and you work as a " + jobs[rand] + ".";
+		return print;
+	}
+		
+	document.getElementById("myBtn").addEventListener("click", function() {
+	document.getElementById("demo").innerHTML = tellFortune();
+	});	
+</script>
+
+</body>
+</html>
+
