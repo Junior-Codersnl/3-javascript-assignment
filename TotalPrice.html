@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button id="buy">BUY</button>
+<h1 id="demo"></h1>
+
+<script>
+	const  cartForParty  =  {Banana:1.15, Apple:0.95, Kiwi:2.25}; 	
+
+	function addToShoppingCart() {
+		var total = 0;
+		var list = "";
+		var x;
+		for (x in cartForParty) {
+			list += x +" : " + cartForParty[x] + "<br>" ;
+			total += cartForParty[x];
+		}
+		list +='-----------------<br>' + 'Total : ' + total;
+		return list
+		}	
+
+	document.getElementById("buy").addEventListener("click", function() {
+  	document.getElementById("demo").innerHTML = addToShoppingCart();
+});	
+</script>
+</body>
+</html>

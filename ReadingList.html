@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button id="list">LIST</button>
+<h5 id="demo"></h5>
+
+<script>
+	const a = ['The Da Vinci Code','Dan Brown',0];
+	const b = ['Harry Potter and the Deathly Hallows', 'J.K. Rowling',1];
+	const c = ['One Day', 'David Nicholls',0];
+	const d = ['Life of Pi','Yann Martel',1];
+	const bookList = [a,b,c,d];	
+
+	function viewBook() {		
+		var list = "";
+		var x;
+		for (x in  bookList) {
+			list += bookList[x][0] + ' by ' +bookList[x][1] + "<br>";
+			if (bookList[x][2]==0 ) {
+				list += "You still need to read '" + bookList[x][0] + "'. <br>";
+			} else {
+				list += "You already read '" + bookList[x][0] + "'. <br>";
+			}			
+		}
+		return list	
+	}	
+	document.getElementById("list").addEventListener("click", function() {
+  	document.getElementById("demo").innerHTML = viewBook();
+});	
+</script>
+</body>
+</html>

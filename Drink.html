@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button id="list">BUY</button>
+<h3 id="demo"></h3>
+
+<script>
+	const drinkTypes = ['cola', 'lemonade', 'water'];
+	const drinkTray = [];
+
+	function tray() {		
+		var list = "";
+		var i;
+		for (i = 0; i < 5; i++) {
+			var rand = Math.floor(Math.random() * drinkTypes.length);
+			drinkTray.push(drinkTypes[rand])
+			//if (drinkTray.includes(drinkTypes[rand])){
+				//delete drinkTypes[rand];				
+			//}
+		drinkTray.sort();		
+		}
+		return drinkTray;	
+	}	
+	document.getElementById("list").addEventListener("click", function() {
+  	document.getElementById("demo").innerHTML = "Hey guys, I brought a " + tray() +"!";
+});	
+</script>
+</body>
+</html>

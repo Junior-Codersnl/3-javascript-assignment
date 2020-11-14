@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Add to Cart: <input type="text" id="myText">
+<button id='add'>ADD</button> <br>
+
+<button id="buy">BUY</button>
+<h1 id="demo"></h1>
+
+<script>
+	const shoppingCart = ['bananas', 'milk']; 	
+
+	function addToShoppingCart() {
+		var item = document.getElementById("myText").value;
+		shoppingCart.push(item)
+		if (shoppingCart.length>3) {
+			shoppingCart.shift();
+		}
+	}	
+
+	function buylist() {
+		var shopingList = "You bought ";
+		var i;
+		for (i = 0; i < shoppingCart.length; i++) {
+		  shopingList += shoppingCart[i] + ", ";
+		}
+		return shopingList;
+	}
+
+	document.getElementById("add").addEventListener("click", function() {
+  	addToShoppingCart()});
+
+	document.getElementById("buy").addEventListener("click", function() {
+  	document.getElementById("demo").innerHTML = buylist();
+});	
+</script>
+</body>
+</html>
