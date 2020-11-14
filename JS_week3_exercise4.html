@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+
+	const shoppingCart = ['bananas', 'milk'];
+	text = "";
+
+	function addToShoppingCart (item)
+	{	shoppingCart.push(item);
+		if (shoppingCart.length>=4)
+			{
+				shoppingCart.shift();
+
+				for (var i=0; i<shoppingCart.length; i++)
+				{
+					text += shoppingCart[i]+ ", ";
+				}
+				document.getElementById("demo").innerHTML = "You bought "+shoppingCart+ "!";
+
+			}
+		else
+			{	
+				for (var i=0; i<shoppingCart.length; i++)
+				{
+					text += shoppingCart[i]+ ", ";
+				}
+				document.getElementById("demo").innerHTML = "You bought "+shoppingCart+ "!";
+			}
+	}
+
+	addToShoppingCart('chocolate');
+	// addToShoppingCart('waffles');
+	// addToShoppingCart('tea');
+
+
+	</script>
+
+
+
+
+</body>
+</html>

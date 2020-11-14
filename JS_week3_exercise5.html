@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+
+	const cartForParty = {"beer":1.75, "chips":0.99, "coke":1.01, "nuts":4.25, "cookies":2.75}
+	sum = 0;
+
+
+	function calculateTotalPrice(items)
+	{
+		sum = items.beer+items.chips+items.coke+items.nuts+items.cookies;
+		document.getElementById("demo").innerHTML = "Total: €"+sum;
+
+	}
+
+
+	calculateTotalPrice(cartForParty);
+
+	</script>
+
+
+
+
+</body>
+</html>
